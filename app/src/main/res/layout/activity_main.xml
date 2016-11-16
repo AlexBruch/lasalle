@@ -16,6 +16,5 @@
         android:id="@+id/list"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        style="@android:style/Widget.Material.ListView" />
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
