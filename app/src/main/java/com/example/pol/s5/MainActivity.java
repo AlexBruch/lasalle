@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
+
 public  class MainActivity extends AppCompatActivity {
 
     @Override
@@ -50,7 +52,7 @@ public  class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         if(listaSpinner.getId()=="1"){
-                            Intent intent = new Intent(getApplicationContext(), ListViewcl.class);
+                            Intent intent = new Intent(getApplicationContext(), llista_listview.class);
                             startActivity(intent);
                         } else if(listaSpinner.getId()=="2"){
                             Intent intent = new Intent(getApplicationContext(),RecyclerView.class);

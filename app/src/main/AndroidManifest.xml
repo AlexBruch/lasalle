@@ -17,6 +17,7 @@
         </activity>
         <activity android:name=".Opcio" />
         <activity android:name=".bcn" />
+        <activity android:name=".llista_listview"></activity>
     </application>
 
 </manifest>
