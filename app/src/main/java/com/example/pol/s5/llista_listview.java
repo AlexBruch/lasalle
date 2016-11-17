@@ -12,7 +12,7 @@ public class llista_listview extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_llista_listview);
+        setContentView(R.layout.activity_llista);
 
 
         final ListView lista = (ListView)findViewById(R.id.list);

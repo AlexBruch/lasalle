@@ -9,18 +9,13 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
-
 import java.util.ArrayList;
-
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
 
 public  class MainActivity extends AppCompatActivity {
 
     @Override
     protected  void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        /* Codi Alex prova */
 
         setContentView(R.layout.main_activity);
 
@@ -55,7 +50,7 @@ public  class MainActivity extends AppCompatActivity {
                             Intent intent = new Intent(getApplicationContext(), llista_listview.class);
                             startActivity(intent);
                         } else if(listaSpinner.getId()=="2"){
-                            Intent intent = new Intent(getApplicationContext(),RecyclerView.class);
+                            Intent intent = new Intent(getApplicationContext(),Llista_RecyclerView.class);
                             startActivity(intent);
                         }
                     }
@@ -67,35 +62,6 @@ public  class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
-        /** Codi Pol correcte
-
-        setContentView(R.layout.activity_main);
-
-        final ListView lista =(ListView)findViewById(R.id.list);
-        ItemsAdapter adeu = new ItemsAdapter(this);
-        lista.setAdapter(adeu);
-
-
-
-      lista.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-           @Override
-           public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-               //Intent inici = new Intent(getApplicationContext(),Opcio.class);
-               switch( position )
-               {
-                   case 0:  Intent opcio0 = new Intent(getApplicationContext(),bcn.class);
-                       startActivity(opcio0);
-                       break;
-                   default:  Intent opcio2 =  new Intent(getApplicationContext(),Opcio.class);
-                       startActivity(opcio2);
-                       break;
-               }
-           }
-       });
-
-        **/
 
     }
 
