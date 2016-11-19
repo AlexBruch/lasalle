@@ -20,9 +20,6 @@ public class rome extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                // TODO:
-                // This function closes Activity Two
-                // Hint: use Context's finish() method
                 finish();
             }
         });
