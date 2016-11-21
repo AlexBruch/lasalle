@@ -1,5 +1,7 @@
 package com.example.pol.s5;
 
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,7 +22,23 @@ public class bcn extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-              finish();
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(bcn.this);
+                builder.setMessage(getString(R.string.seguro))
+                        .setTitle(getString(R.string.alert));
+                builder.setPositiveButton(getString(R.string.yes), new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        finish();
+                    }
+                });
+                builder.setNegativeButton(getString(R.string.cancel), new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.dismiss();
+                    }
+                });
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
             }
         });
     }

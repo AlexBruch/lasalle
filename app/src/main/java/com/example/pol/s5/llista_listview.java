@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class llista_listview extends AppCompatActivity {
 
@@ -32,32 +33,33 @@ public class llista_listview extends AppCompatActivity {
                         startActivity(opcio0);
                         break;
                     case 1:
-                        String detalls = "Rome is not available ";
-                        String titol = "Rome";
+
                         // 1. Instantiate an AlertDialog.Builder with its constructor
                         AlertDialog.Builder builder = new AlertDialog.Builder(llista_listview.this);
-                        builder.setMessage(detalls)
-                                .setTitle(titol);
-                        builder.setPositiveButton("go to bcn", new DialogInterface.OnClickListener() {
+                        builder.setMessage(getString(R.string.romedetalls))
+                                .setTitle("Rome");
+                        builder.setPositiveButton("Barcelona", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
                                 Intent opcio0 = new Intent(getApplicationContext(),bcn.class);
                                 startActivity(opcio0);
                             }
                         });
-                        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                        builder.setNeutralButton("Retry", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                Toast.makeText(llista_listview.this, "Error", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                        builder.setNegativeButton(getString(R.string.cancel), new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
                                 dialog.dismiss();
                             }
                         });
-// Set other dialog properties
-
-// Create the AlertDialog
                         AlertDialog dialog = builder.create();
                         dialog.show();
-
                         break;
-                    default:  Intent opcio2 =  new Intent(getApplicationContext(),Opcio.class);
-                        startActivity(opcio2);
+
+                    default:  Intent opcio3 =  new Intent(getApplicationContext(),Opcio.class);
+                        startActivity(opcio3);
                         break;
                 }
             }
