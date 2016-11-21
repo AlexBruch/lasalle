@@ -29,6 +29,9 @@ public class llista_listview extends AppCompatActivity {
                     case 0:  Intent opcio0 = new Intent(getApplicationContext(),bcn.class);
                         startActivity(opcio0);
                         break;
+                    case 1:  Intent opcio1 = new Intent(getApplicationContext(),rome.class);
+                        startActivity(opcio1);
+                        break;
                     default:  Intent opcio2 =  new Intent(getApplicationContext(),Opcio.class);
                         startActivity(opcio2);
                         break;

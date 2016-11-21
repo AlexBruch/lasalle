@@ -11,7 +11,7 @@ public class rome extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rome);
+        setContentView(R.layout.activity_bcn);
         TextView tx1 = (TextView) findViewById(R.id.tx1);
         tx1.setText("Rome");
         Button closeButton = (Button) findViewById(R.id.bClose);
