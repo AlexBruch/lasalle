@@ -1,6 +1,8 @@
 package com.example.pol.s5;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,8 +31,30 @@ public class llista_listview extends AppCompatActivity {
                     case 0:  Intent opcio0 = new Intent(getApplicationContext(),bcn.class);
                         startActivity(opcio0);
                         break;
-                    case 1:  Intent opcio1 = new Intent(getApplicationContext(),rome.class);
-                        startActivity(opcio1);
+                    case 1:
+                        String detalls = "Rome is not available ";
+                        String titol = "Rome";
+                        // 1. Instantiate an AlertDialog.Builder with its constructor
+                        AlertDialog.Builder builder = new AlertDialog.Builder(llista_listview.this);
+                        builder.setMessage(detalls)
+                                .setTitle(titol);
+                        builder.setPositiveButton("go to bcn", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                Intent opcio0 = new Intent(getApplicationContext(),bcn.class);
+                                startActivity(opcio0);
+                            }
+                        });
+                        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.dismiss();
+                            }
+                        });
+// Set other dialog properties
+
+// Create the AlertDialog
+                        AlertDialog dialog = builder.create();
+                        dialog.show();
+
                         break;
                     default:  Intent opcio2 =  new Intent(getApplicationContext(),Opcio.class);
                         startActivity(opcio2);

@@ -23,8 +23,8 @@ public class ItemsAdapter extends BaseAdapter {
     public ItemsAdapter(Context context){
         mContext=context;
         mItems = new ArrayList<>();
-        mItems.add(new ItemsList( "Barcelona","Aquella ciutat que et deixa...",R.drawable.bcn,"459$"));
-        mItems.add(new ItemsList( "Roma","Gelats i pasta",R.drawable.rome,"329$"));
+        mItems.add(new ItemsList( "Barcelona","Go to Activity",R.drawable.bcn,"459$"));
+        mItems.add(new ItemsList( "Rome","Simple AlertDialog",R.drawable.rome,"329$"));
         mItems.add(new ItemsList( "New York","La ciutat dels grans gratacels",R.drawable.ny,"1199$"));
 
     }
