@@ -6,7 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import static com.example.pol.s5.R.id.activity_bcn;
 
 public class bcn extends AppCompatActivity {
 
@@ -17,6 +21,9 @@ public class bcn extends AppCompatActivity {
         TextView tx1 = (TextView) findViewById(R.id.tx1);
         tx1.setText("Bacelona");
         Button closeButton = (Button) findViewById(R.id.bClose);
+        CheckBox chBox = (CheckBox) findViewById(R.id.checkBox);
+       Button fondo = (Button) findViewById(R.id.button2);
+
         closeButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -39,6 +46,16 @@ public class bcn extends AppCompatActivity {
 
                 AlertDialog dialog = builder.create();
                 dialog.show();
+            }
+        });
+        fondo.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                View someView = findViewById(activity_bcn);
+                View root = someView.getRootView();
+                root.setBackgroundColor(getResources().getColor(R.color.blue));
+
             }
         });
     }

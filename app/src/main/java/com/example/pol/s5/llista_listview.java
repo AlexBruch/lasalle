@@ -44,17 +44,14 @@ public class llista_listview extends AppCompatActivity {
                                 startActivity(opcio0);
                             }
                         });
-                        builder.setNeutralButton("Retry", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                Toast.makeText(llista_listview.this, "Error", Toast.LENGTH_SHORT).show();
-                            }
-                        });
+
                         builder.setNegativeButton(getString(R.string.cancel), new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
                                 dialog.dismiss();
                             }
                         });
                         AlertDialog dialog = builder.create();
+                        dialog.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
                         dialog.show();
                         break;
 
