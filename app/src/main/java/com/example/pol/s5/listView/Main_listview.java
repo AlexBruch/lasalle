@@ -9,7 +9,7 @@ import android.widget.ListView;
 
 import com.example.pol.s5.R;
 
-public class llista_listview extends AppCompatActivity {
+public class Main_listview extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

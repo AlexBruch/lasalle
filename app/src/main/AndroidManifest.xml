@@ -17,8 +17,8 @@
         </activity>
         <activity android:name=".listView.Opcio" />
         <activity android:name=".listView.bcn" />
-        <activity android:name=".listView.llista_listview" />
-        <activity android:name=".recyclerView.Llista_RecyclerView"></activity>
+        <activity android:name=".listView.Main_listview" />
+        <activity android:name=".recyclerView.Main_RecyclerView"></activity>
     </application>
 
 </manifest>

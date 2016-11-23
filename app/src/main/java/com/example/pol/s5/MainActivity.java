@@ -11,9 +11,8 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.pol.s5.com.spinner.s5.ListaSpinner;
-import com.example.pol.s5.recyclerView.Llista_RecyclerView;
-import com.example.pol.s5.R;
-import com.example.pol.s5.listView.llista_listview;
+import com.example.pol.s5.recyclerView.Main_RecyclerView;
+import com.example.pol.s5.listView.Main_listview;
 
 import java.util.ArrayList;
 
@@ -53,10 +52,10 @@ public  class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         if(listaSpinner.getId()=="1"){
-                            Intent intent = new Intent(getApplicationContext(), llista_listview.class);
+                            Intent intent = new Intent(getApplicationContext(), Main_listview.class);
                             startActivity(intent);
                         } else if(listaSpinner.getId()=="2"){
-                            Intent intent = new Intent(getApplicationContext(),Llista_RecyclerView.class);
+                            Intent intent = new Intent(getApplicationContext(),Main_RecyclerView.class);
                             startActivity(intent);
                         }
                     }
