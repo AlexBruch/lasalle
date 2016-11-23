@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">S5</string>
+    <string name="bcnstring">Ir a la actividad y S6</string>
+    <string name="romestring">Animación de Alerta dialogo</string>
+    <string name="seguro">Esta seguro?</string>
+    <string name="close">Cerrar</string>
+    <string name="nystring">zzzzz</string>
+    <string name="romedetalls">Roma no esta disponible</string>
+    <string name="yes">Si</string>
+    <string name="cancel">Cancelar</string>
+    <string name="alert">Alerta</string>
+    <string name="check">Test de color boton</string>
+    <string name="bcheck">Test</string>
+</resources>
