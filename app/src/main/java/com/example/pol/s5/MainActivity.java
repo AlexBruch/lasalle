@@ -9,6 +9,12 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.example.pol.s5.com.spinner.s5.ListaSpinner;
+import com.example.pol.s5.recyclerView.Llista_RecyclerView;
+import com.example.pol.s5.R;
+import com.example.pol.s5.listView.llista_listview;
+
 import java.util.ArrayList;
 
 public  class MainActivity extends AppCompatActivity {

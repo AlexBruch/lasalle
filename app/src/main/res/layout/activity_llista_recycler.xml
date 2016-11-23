@@ -24,12 +24,12 @@
             android:id="@+id/item_details"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/item_preu"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="right" />
 
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/item_preu"
-        android:layout_width="50dp"
-        android:layout_height="50dp" />
 
 </LinearLayout>

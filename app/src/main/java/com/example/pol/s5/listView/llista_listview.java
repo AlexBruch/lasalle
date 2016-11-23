@@ -1,4 +1,4 @@
-package com.example.pol.s5;
+package com.example.pol.s5.listView;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
+import com.example.pol.s5.R;
 
 public class llista_listview extends AppCompatActivity {
 

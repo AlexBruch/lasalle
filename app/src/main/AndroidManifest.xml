@@ -15,10 +15,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Opcio" />
-        <activity android:name=".bcn" />
-        <activity android:name=".llista_listview" />
-        <activity android:name=".Llista_RecyclerView"></activity>
+        <activity android:name=".listView.Opcio" />
+        <activity android:name=".listView.bcn" />
+        <activity android:name=".listView.llista_listview" />
+        <activity android:name=".recyclerView.Llista_RecyclerView"></activity>
     </application>
 
 </manifest>

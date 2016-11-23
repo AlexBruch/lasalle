@@ -1,4 +1,4 @@
-package com.example.pol.s5;
+package com.example.pol.s5.com.spinner.s5;
 
 /**
  * Created by alexbruch on 16/11/16.

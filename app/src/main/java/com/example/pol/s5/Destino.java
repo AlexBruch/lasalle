@@ -4,13 +4,13 @@ package com.example.pol.s5;
  * Created by Pol on 15/11/2016.
  */
 
-public class ItemsList {
+public class Destino {
     private String mName;
     private String mDetails;
     private int mImage;
     private String mPreu;
 
-    public ItemsList(String name, String details, int image, String preu){
+    public Destino(String name, String details, int image, String preu){
         mName=name;
         mDetails=details;
         mImage=image;

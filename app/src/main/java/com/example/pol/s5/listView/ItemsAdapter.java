@@ -1,4 +1,4 @@
-package com.example.pol.s5;
+package com.example.pol.s5.listView;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,8 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
+
+import com.example.pol.s5.Destino;
+import com.example.pol.s5.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,14 +20,14 @@ import java.util.List;
 
 public class ItemsAdapter extends BaseAdapter {
     private Context mContext;
-    private List<ItemsList> mItems;
+    private List<Destino> mItems;
 
     public ItemsAdapter(Context context){
         mContext=context;
         mItems = new ArrayList<>();
-        mItems.add(new ItemsList( "Barcelona","Aquella ciutat que et deixa...",R.drawable.bcn,"459$"));
-        mItems.add(new ItemsList( "Roma","Gelats i pasta",R.drawable.rome,"329$"));
-        mItems.add(new ItemsList( "New York","La ciutat dels grans gratacels",R.drawable.ny,"1199$"));
+        mItems.add(new Destino( "Barcelona","Aquella ciutat que et deixa...", R.drawable.bcn,"459$"));
+        mItems.add(new Destino( "Roma","Gelats i pasta",R.drawable.rome,"329$"));
+        mItems.add(new Destino( "New York","La ciutat dels grans gratacels",R.drawable.ny,"1199$"));
 
     }
     @Override
@@ -44,7 +46,7 @@ public class ItemsAdapter extends BaseAdapter {
             LayoutInflater inflater = (LayoutInflater)mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.itemsla, parent, false);
         }
-        ItemsList item = mItems.get(position);
+        Destino item = mItems.get(position);
         TextView title = (TextView)convertView.findViewById(R.id.item_title);
         TextView details = (TextView)convertView.findViewById(R.id.item_details);
         TextView preu = (TextView)convertView.findViewById(R.id.item_preu);
@@ -55,7 +57,6 @@ public class ItemsAdapter extends BaseAdapter {
         image.setImageResource(item.getImage());
         return convertView;
     }
-
 
 
 }
