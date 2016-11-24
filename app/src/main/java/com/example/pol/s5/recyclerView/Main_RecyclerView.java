@@ -26,16 +26,17 @@ public class Main_RecyclerView extends AppCompatActivity {
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
+        recyclerView.addItemDecoration(new Divider(this, LinearLayoutManager.VERTICAL));
         myListItemClassAdapter = new MyListItemClassAdapter(destinoList);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(myListItemClassAdapter);
 
-        pelis();
+        destinos();
     }
 
-    public void pelis() {
+    public void destinos() {
         Destino listaDestino = new Destino("Barcelona2","Aquella ciutat que et deixa...", R.drawable.bcn,"459$");
         destinoList.add(listaDestino);
 
