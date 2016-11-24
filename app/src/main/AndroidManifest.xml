@@ -15,8 +15,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".listView.Opcio" />
-        <activity android:name=".listView.bcn" />
         <activity android:name=".listView.Main_listview" />
         <activity android:name=".recyclerView.Main_RecyclerView" />
         <activity android:name=".InfoDestino"></activity>

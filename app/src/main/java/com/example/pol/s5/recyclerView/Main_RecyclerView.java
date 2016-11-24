@@ -62,11 +62,11 @@ public class Main_RecyclerView extends AppCompatActivity {
             public void onItemClick(View v, int position) {
                 Destino destino = listaDestinos.get(position);
 
-                Toast toast1 = Toast.makeText(getApplicationContext(), destino.getName(), Toast.LENGTH_SHORT);
-                toast1.show();
-
                 Intent intent = new Intent(getApplicationContext(), InfoDestino.class);
                 intent.putExtra("ciudad", destino.getName());
+                intent.putExtra("descripcion", destino.getDetails());
+                intent.putExtra("precio", destino.getmPreu());
+                intent.putExtra("foto", destino.getImage());
 
                 startActivity(intent);
 
