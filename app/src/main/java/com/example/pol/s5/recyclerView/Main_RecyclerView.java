@@ -1,5 +1,6 @@
 package com.example.pol.s5.recyclerView;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -17,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.pol.s5.Destino;
+import com.example.pol.s5.InfoDestino;
 import com.example.pol.s5.R;
 
 import java.util.ArrayList;
@@ -62,6 +64,12 @@ public class Main_RecyclerView extends AppCompatActivity {
 
                 Toast toast1 = Toast.makeText(getApplicationContext(), destino.getName(), Toast.LENGTH_SHORT);
                 toast1.show();
+
+                Intent intent = new Intent(getApplicationContext(), InfoDestino.class);
+                intent.putExtra("ciudad", destino.getName());
+
+                startActivity(intent);
+
             }
         });
 

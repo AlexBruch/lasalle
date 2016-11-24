@@ -13,9 +13,6 @@ public class Opcio extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opcio);
 
-
-
-
         Bundle param = getIntent().getExtras();
 
         if (param!=null){
