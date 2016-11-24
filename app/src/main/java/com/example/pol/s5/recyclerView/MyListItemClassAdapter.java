@@ -1,10 +1,10 @@
 package com.example.pol.s5.recyclerView;
 
 import android.content.Context;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,53 +18,46 @@ import java.util.List;
  * Created by alexbruch on 23/11/16.
  */
 
-public class MyListItemClassAdapter extends BaseAdapter{
+public class MyListItemClassAdapter extends RecyclerView.Adapter<MyListItemClassAdapter.ViewHolder> {
 
-    private Context mContext;
-    private List<Destino> items;
+    private List<Destino> destinoList;
 
-    public MyListItemClassAdapter(Context context) {
-        mContext = context;
-        items = new ArrayList<>();
-        items.add(new Destino( "Barcelona2","Aquella ciutat que et deixa...", R.drawable.bcn,"459$"));
-        items.add(new Destino( "Roma2","Gelats i pasta",R.drawable.rome,"329$"));
-        items.add(new Destino( "New York2","La ciutat dels grans gratacels",R.drawable.ny,"1199$"));
+    public static class ViewHolder extends RecyclerView.ViewHolder {
 
-    }
+        public TextView ciudad, descripcion, precio;
+        public ImageView foto;
 
-    @Override
-    public int getCount() {
-        return items.size();
-    }
-
-    @Override
-    public Object getItem(int position) {
-        return items.get(position);
-    }
-
-    @Override
-    public long getItemId(int position) {
-        return position;
-    }
-
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-
-        if(convertView == null){
-            LayoutInflater inflater = (LayoutInflater)mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.itemsla, parent, false);
+        public ViewHolder(View view) {
+            super(view);
+            ciudad = (TextView) view.findViewById(R.id.item_title);
+            descripcion = (TextView) view.findViewById(R.id.item_details);
+            precio = (TextView) view.findViewById(R.id.item_preu);
+            foto = (ImageView) view.findViewById(R.id.item_image);
         }
-        Destino item = items.get(position);
-        TextView ciudad =(TextView)convertView.findViewById(R.id.item_title);
-        TextView descripcion = (TextView)convertView.findViewById(R.id.item_details);
-        TextView precio = (TextView)convertView.findViewById(R.id.item_preu);
-        ImageView foto = (ImageView)convertView.findViewById(R.id.item_image);
+    }
 
-        ciudad.setText(item.getName());
-        descripcion.setText(item.getDetails());
-        precio.setText(item.getmPreu());
-        foto.setImageResource(item.getImage());
+    public MyListItemClassAdapter(List<Destino> destinoList) {
+        this.destinoList = destinoList;
+    }
 
-        return convertView;
+    @Override
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.itemsla, parent, false);
+        return new ViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(ViewHolder holder, int position) {
+        Destino destino = destinoList.get(position);
+        holder.ciudad.setText(destino.getName());
+        holder.descripcion.setText(destino.getDetails());
+        holder.precio.setText(destino.getmPreu());
+        holder.foto.setImageResource(destino.getImage());
+    }
+
+    @Override
+    public int getItemCount() {
+        return destinoList.size();
     }
 }
