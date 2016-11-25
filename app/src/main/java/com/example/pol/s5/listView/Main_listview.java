@@ -7,7 +7,12 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.example.pol.s5.Destino;
+import com.example.pol.s5.InfoDestino;
 import com.example.pol.s5.R;
+import com.example.pol.s5.recyclerView.Main_RecyclerView;
+
+import static android.R.attr.name;
 
 public class Main_listview extends AppCompatActivity {
 
@@ -18,7 +23,23 @@ public class Main_listview extends AppCompatActivity {
 
         final ListView lista = (ListView)findViewById(R.id.list);
 
-        ItemsAdapter adeu = new ItemsAdapter(this);
-        lista.setAdapter(adeu);
+        final ItemsAdapter itemsAdapter = new ItemsAdapter(this);
+        lista.setAdapter(itemsAdapter);
+
+
+        /** Click al element de la llista, agafant tota la info com a objecte **/
+
+        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                Object item = adapterView.getItemAtPosition(position);
+
+                Intent intent = new Intent(getApplicationContext(), InfoDestino.class);
+                //intent.putExtra("ciudad", item.getName());
+                startActivity(intent);
+            }
+        });
+
+
     }
 }

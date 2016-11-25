@@ -45,7 +45,7 @@ public class Main_RecyclerView extends AppCompatActivity {
         Lista = (RecyclerView) findViewById(R.id.recycler_view);
         Lista.setHasFixedSize(true);
 
-        listaDestinos = new ArrayList<Destino>();
+        listaDestinos = new ArrayList<>();
         listaDestinos.add(new Destino("Barcelona","Aquella ciutat que et deixa...", R.drawable.bcn,"459$"));
         listaDestinos.add(new Destino("Roma","Gelats i pasta",R.drawable.rome,"329$"));
         listaDestinos.add(new Destino("New York","La ciutat dels grans gratacels",R.drawable.ny,"1199$"));
@@ -85,7 +85,6 @@ public class Main_RecyclerView extends AppCompatActivity {
     }
 
     public static class Adaptador extends RecyclerView.Adapter<Adaptador.DestinoViewHolder> {
-        private View.OnClickListener listener;
         private OnItemClickListener onItemClickListener;
         private ArrayList<Destino> listaDestinos;
 

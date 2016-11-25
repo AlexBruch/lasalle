@@ -1,15 +1,19 @@
 package com.example.pol.s5.listView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.pol.s5.Destino;
+import com.example.pol.s5.InfoDestino;
 import com.example.pol.s5.R;
+import com.example.pol.s5.recyclerView.Main_RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +34,7 @@ public class ItemsAdapter extends BaseAdapter {
         mItems.add(new Destino( "New York","La ciutat dels grans gratacels",R.drawable.ny,"1199$"));
 
     }
+
     @Override
     public int getCount(){return mItems.size();}
 
@@ -57,6 +62,4 @@ public class ItemsAdapter extends BaseAdapter {
         image.setImageResource(item.getImage());
         return convertView;
     }
-
-
 }
