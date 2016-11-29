@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import static com.example.pol.s5.R.id.activity_bcn;
 
@@ -20,10 +19,13 @@ public class bcn extends AppCompatActivity {
         setContentView(R.layout.activity_bcn);
         TextView tx1 = (TextView) findViewById(R.id.tx1);
         tx1.setText("Bacelona");
+
         Button closeButton = (Button) findViewById(R.id.bClose);
         CheckBox chBox = (CheckBox) findViewById(R.id.checkBox);
        Button fondo = (Button) findViewById(R.id.button2);
 
+
+//Close Button
         closeButton.setOnClickListener(new View.OnClickListener() {
 
             @Override

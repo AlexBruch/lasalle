@@ -26,16 +26,19 @@ public class llista_listview extends AppCompatActivity {
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent inici = new Intent(getApplicationContext(),Opcio.class);
+                String param1, param2;
+                int param3;
+
                 switch( position )
                 {
-                    case 0:  Intent opcio0 = new Intent(getApplicationContext(),bcn.class);
+                    case 0:
+                        Intent opcio0 = new Intent(getApplicationContext(),bcn.class);
 
                         startActivity(opcio0);
                         break;
                     case 1:
 
-                        // 1. Instantiate an AlertDialog.Builder with its constructor
+
                         AlertDialog.Builder builder = new AlertDialog.Builder(llista_listview.this);
                         builder.setMessage(getString(R.string.romedetalls))
                                 .setTitle("Rome");
@@ -55,9 +58,32 @@ public class llista_listview extends AppCompatActivity {
                         dialog.getWindow().getAttributes().windowAnimations = R.style.dialog_animation;
                         dialog.show();
                         break;
+                    case 2:
+                         param1 =  ((ItemsList) lista.getItemAtPosition(position)).getName();
+                        param2 = ((ItemsList) lista.getItemAtPosition(position)).getDetails();
+                        param3 =((ItemsList) lista.getItemAtPosition(position)).getImage();
+                        Intent opcio2 = new Intent(getApplicationContext(),DetallesCiudad.class);
+                        opcio2.putExtra("param1",param1);
+                        opcio2.putExtra("param2",param2);
+                        opcio2.putExtra("param3",param3);
+                        startActivity(opcio2);
 
-                    default:  Intent opcio3 =  new Intent(getApplicationContext(),Opcio.class);
+                        break;
+                    case 3:
+                         param1 =  ((ItemsList) lista.getItemAtPosition(position)).getName();
+                        param2 = ((ItemsList) lista.getItemAtPosition(position)).getDetails();
+                          param3 =((ItemsList) lista.getItemAtPosition(position)).getImage();
+                        Intent opcio3 = new Intent(getApplicationContext(),DetallesCiudad.class);
+                        opcio3.putExtra("param1",param1);
+                        opcio3.putExtra("param2",param2);
+                        opcio3.putExtra("param3",param3);
                         startActivity(opcio3);
+
+                        break;
+                    default:
+                        Toast.makeText(llista_listview.this, "Error", Toast.LENGTH_SHORT).show();
+
+
                         break;
                 }
             }

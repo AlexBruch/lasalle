@@ -1,15 +1,17 @@
 <resources>
     <string name="app_name">S5</string>
-    <string name="bcnstring">Go to Activity and S6</string>
-    <string name="romestring">Animation + Alert dialog</string>
+    <string name="bcnstring">Barcelona S6 - Another activity</string>
+    <string name="romestring">S6 Animation + Alert dialog</string>
     <string name="seguro">Are you sure?</string>
     <string name="close">Close</string>
-    <string name="nystring">zzzz</string>
+    <string name="nystring">New York S5 - details of each city</string>
     <string name="romedetalls">Rome is not available </string>
     <string name="yes">Ok</string>
     <string name="cancel">Cancel</string>
     <string name="alert">Alert</string>
     <string name="check">Check State color</string>
     <string name="bcheck">Check</string>
+
+    <string name="parisstring">Paris S5 - details of each city</string>
 
 </resources>

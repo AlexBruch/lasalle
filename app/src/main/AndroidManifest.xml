@@ -15,11 +15,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Opcio" />
         <activity android:name=".bcn" />
         <activity android:name=".llista_listview" />
         <activity android:name=".Llista_RecyclerView" />
         <activity android:name=".rome" />
+        <activity android:name=".DetallesCiudad"></activity>
     </application>
 
 </manifest>
