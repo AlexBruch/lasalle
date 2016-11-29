@@ -30,6 +30,7 @@ public class llista_listview extends AppCompatActivity {
                 switch( position )
                 {
                     case 0:  Intent opcio0 = new Intent(getApplicationContext(),bcn.class);
+
                         startActivity(opcio0);
                         break;
                     case 1:
