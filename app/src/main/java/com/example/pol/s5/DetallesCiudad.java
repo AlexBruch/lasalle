@@ -11,7 +11,7 @@ public class DetallesCiudad extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.detallesciudad);
+        setContentView(R.layout.detalleciudad);
 
         Bundle details = getIntent().getExtras();
         String TX1 = details.getString("param1");
