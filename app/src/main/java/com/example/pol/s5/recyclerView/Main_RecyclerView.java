@@ -39,7 +39,6 @@ public class Main_RecyclerView extends AppCompatActivity {
         destinos();
     }
 
-
     public void destinos() {
 
         Lista = (RecyclerView) findViewById(R.id.recycler_view);

@@ -26,6 +26,9 @@ public class InfoDestino extends AppCompatActivity {
         TextView precio = (TextView) findViewById(R.id.precio);
         precio.setText(getIntent().getStringExtra("precio"));
 
+        ImageView imageView = (ImageView) findViewById(R.id.item_image);
+        //imageView.setImageResource(getIntent().);
+
         Toast toast1 = Toast.makeText(getApplicationContext(), "Has seleccionado "+ getIntent().getStringExtra("ciudad"), Toast.LENGTH_SHORT);
         toast1.show();
     }

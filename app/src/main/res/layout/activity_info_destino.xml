@@ -10,20 +10,9 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.pol.s5.InfoDestino">
-
-    <TextView
-        android:text="TextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/ciudad" />
-
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="150dp"
-        android:layout_below="@+id/ciudad"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="14dp"
         android:id="@+id/foto" />
@@ -32,7 +21,16 @@
         android:text="TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/foto"
+        android:id="@+id/ciudad"/>
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ciudad"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:id="@+id/descripcion" />
@@ -44,5 +42,8 @@
         android:layout_centerVertical="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
+        android:layout_below="@+id/descripcion"
         android:id="@+id/precio" />
+
+
 </RelativeLayout>
