@@ -1,4 +1,4 @@
-package com.example.pol.s5.com.spinner.s5;
+package com.example.pol.s5.com.spinner.sesiones;
 
 /**
  * Created by alexbruch on 16/11/16.
@@ -6,7 +6,7 @@ package com.example.pol.s5.com.spinner.s5;
 
 
 /**
- * LLISTA PER EL DESPLEGABLE INICIAL
+ * OBJETO LISTA PARA LOS DIFERENTES EJERCICIOS
  */
 
 public class ListaSpinner {
