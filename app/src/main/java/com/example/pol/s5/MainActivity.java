@@ -31,8 +31,6 @@ public  class MainActivity extends AppCompatActivity {
         ArrayList<ListaSpinner> spinnerLista = new ArrayList<>();
         spinnerLista.add(new ListaSpinner("1", "ListView"));
         spinnerLista.add(new ListaSpinner("2", "RecyclerView"));
-        spinnerLista.add(new ListaSpinner("3", "Sesión 6"));
-        spinnerLista.add(new ListaSpinner("4", "Sesión 7"));
 
         ArrayAdapter<ListaSpinner> adapter = new ArrayAdapter<ListaSpinner>(
                 this,
@@ -59,12 +57,6 @@ public  class MainActivity extends AppCompatActivity {
                         } else if(listaSpinner.getId()=="2"){
                             Intent intent = new Intent(getApplicationContext(),Main_RecyclerView.class);
                             startActivity(intent);
-                        } else if(listaSpinner.getId()=="3") {
-
-
-                        } else if(listaSpinner.getId()=="3") {
-
-
                         }
                     }
                 });
